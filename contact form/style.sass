@@ -1,0 +1,148 @@
+*
+  box-sizing: content-box
+  
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+body 
+  margin: 0 
+  padding: 0
+  background: radial-gradient(grey,black );
+
+main 
+  display: flex
+  margin: 30px auto 
+  width: 800px
+  flex-flow: column
+  h1 
+    margin-top: 20px
+    color: rgb(212, 244, 66)
+    text-align: center
+    font-size: 38px
+    font-family:  'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  h2 
+    margin-top: 40px
+    text-align: center
+    color: white 
+    font-size: 60px
+    font-family: sans-serif
+
+section
+  display: flex
+  width: 600px
+  background-size: 100% 100%
+  flex-flow: row
+  background-repeat: no-repeat
+  margin: auto
+  form 
+    width: 50%
+    margin: auto
+    select 
+      height: 30px
+      border-radius: 5px
+      margin: 8px 0px 8px 0px
+    input
+      margin: auto
+      width: 100%
+      border: none
+      margin: 8px auto
+      height: 35px
+      border-radius: 5px
+      text-indent: 10px
+    textarea
+      box-sizing: border-box
+      width: 100%  
+      height: 200px
+      border-radius: 5px
+      text-indent: 10px
+      padding: 10px 5px
+      margin: 8px auto
+      border: 0
+      font-size: 16px
+    textarea::-webkit-input-placeholder
+      position: relative 
+      font-size: 16px 
+    .g-recaptcha
+      width: 100% !important  
+      margin: 8px auto
+      padding: 0
+      border: none
+      box-sizing: border-box
+      
+    button
+      margin: 10px auto
+      height: 50px  
+      background: #28a745
+      border: 0
+      color: white
+      font-family: inherit
+      line-height: normal
+      overflow: visible
+      padding: 0
+      width: 100%
+      border-radius: 5px
+      box-shadow:  0px 0px 5px black
+      &:hover
+        cursor: pointer
+      &:focus 
+        box-shadow: inset 0px 0px 5px black  
+
+
+@media all and (min-width: 500px) and (max-width: 800px)
+  main 
+    display: flex
+    margin: 50px auto 
+    width: 100%
+    flex-flow: column
+    h1 
+      color: rgb(212, 244, 66)
+      text-align: center
+      font-size: 30px
+      margin: auto 30px
+    h2 
+      margin-top: 40px
+      text-align: center
+      color: white 
+      font-size: 45px
+      margin: 40px 30px auto 30px
+  section
+    display: flex
+    width: 330px
+    background-size: 100% 100%
+    flex-flow: row
+    background-repeat: no-repeat
+    margin: auto    
+    form 
+      width: 90%    
+  
+@media all and (max-width: 499px)
+    main 
+      display: flex
+      margin: 50px auto 
+      width: 100%
+      flex-flow: column
+      h1 
+        color: rgb(212, 244, 66)
+        text-align: center
+        font-size: 30px
+        margin: auto 30px
+      h2 
+        margin-top: 40px
+        text-align: center
+        color: white 
+        font-size: 45px
+        margin: 40px 30px auto 30px
+    section
+      display: flex
+      width: 330px
+      background-size: 100% 100%
+      flex-flow: row
+      background-repeat: no-repeat
+      margin: auto    
+      form 
+        width: 90%

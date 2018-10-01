@@ -1,0 +1,183 @@
+* {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: -webkit-radial-gradient(grey, black);
+  background: -o-radial-gradient(grey, black);
+  background: radial-gradient(grey, black); }
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px auto;
+  width: 800px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column; }
+  main h1 {
+    margin-top: 20px;
+    color: #d4f442;
+    text-align: center;
+    font-size: 38px;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+  main h2 {
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    font-family: sans-serif; }
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 600px;
+  background-size: 100% 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  background-repeat: no-repeat;
+  margin: auto; }
+  section form {
+    width: 50%;
+    margin: auto; }
+    section form select {
+      height: 30px;
+      border-radius: 5px;
+      margin: 8px 0px 8px 0px; }
+    section form input {
+      margin: auto;
+      width: 100%;
+      border: none;
+      margin: 8px auto;
+      height: 35px;
+      border-radius: 5px;
+      text-indent: 10px; }
+    section form textarea {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 100%;
+      height: 200px;
+      border-radius: 5px;
+      text-indent: 10px;
+      padding: 10px 5px;
+      margin: 8px auto;
+      border: 0;
+      font-size: 16px; }
+    section form textarea::-webkit-input-placeholder {
+      position: relative;
+      font-size: 16px; }
+    section form .g-recaptcha {
+      width: 100% !important;
+      margin: 8px auto;
+      padding: 0;
+      border: none;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+    section form button {
+      margin: 10px auto;
+      height: 50px;
+      background: #28a745;
+      border: 0;
+      color: white;
+      font-family: inherit;
+      line-height: normal;
+      overflow: visible;
+      padding: 0;
+      width: 100%;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 0px 5px black;
+      box-shadow: 0px 0px 5px black; }
+      section form button:hover {
+        cursor: pointer; }
+      section form button:focus {
+        -webkit-box-shadow: inset 0px 0px 5px black;
+        box-shadow: inset 0px 0px 5px black; }
+
+@media all and (min-width: 500px) and (max-width: 800px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 50px auto;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column; }
+    main h1 {
+      color: #d4f442;
+      text-align: center;
+      font-size: 30px;
+      margin: auto 30px; }
+    main h2 {
+      margin-top: 40px;
+      text-align: center;
+      color: white;
+      font-size: 45px;
+      margin: 40px 30px auto 30px; }
+  section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 330px;
+    background-size: 100% 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    background-repeat: no-repeat;
+    margin: auto; }
+    section form {
+      width: 90%; } }
+
+@media all and (max-width: 499px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 50px auto;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column; }
+    main h1 {
+      color: #d4f442;
+      text-align: center;
+      font-size: 30px;
+      margin: auto 30px; }
+    main h2 {
+      margin-top: 40px;
+      text-align: center;
+      color: white;
+      font-size: 45px;
+      margin: 40px 30px auto 30px; }
+  section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 330px;
+    background-size: 100% 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    background-repeat: no-repeat;
+    margin: auto; }
+    section form {
+      width: 90%; } }
