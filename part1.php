@@ -1,4 +1,5 @@
 <?php
+//Code tested in PHP 7.0.8 Zend Engine v.3.0.0
 //class
 class exampleClass 
 {
