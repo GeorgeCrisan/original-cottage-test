@@ -60,6 +60,11 @@ section {
       border-radius: 5px;
       margin: 8px 0px 8px 0px;
       width: 19.6%; }
+    section form label {
+      min-width: 100% !important;
+      display: block;
+      color: white;
+      font-family: sans-serif; }
     section form input {
       margin: auto;
       width: 100%;

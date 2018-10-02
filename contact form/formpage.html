@@ -18,18 +18,23 @@
       <h2>Want to buy this domain?</h2>
     </main>
     <section> 
-      <form action="/url-to-go-to" method="get" target="_self" autocomplete="off" id="contact-form"> 
+      <form action="/url-to-go-to" method="get" target="_self" autocomplete="off" role="form" id="contact-form"> 
+        <label for="firstname">Title and First Name:</label>
         <select name="title">
           <option value="Mr">Mr</option>
           <option value="Mrs">Mrs</option>
           <option value="Ms"> Ms</option>
           <option value="Miss">Miss</option>
         </select>
-        <input type="text" name="firstname" placeholder="Name:" required>
-        <input type="text" name="surname" placeholder="Surname:" required>
-        <input type="email" name="email" placeholder="Email:" required>
-        <input type="text" name="phoneNumber" placeholder="Phone:" required>
-        <textarea name="message" rows="10" placeholder="Message:"></textarea>
+        <input type="text" id="firstname" name="firstname" placeholder="First Name:" required>
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" placeholder="Surname:" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email:" required>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" placeholder="Phone:" required>
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" rows="10" placeholder="Message:"></textarea>
         <div class="g-recaptcha" data-sitekey="6LemDHMUAAAAAPT8Ri1L9w6qN5XZYFLTnUJawHae"></div>
         <button type="submite">Enquire Now</button>
       </form>
