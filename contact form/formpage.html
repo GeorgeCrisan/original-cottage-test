@@ -18,8 +18,8 @@
       <h2>Want to buy this domain?</h2>
     </main>
     <section> 
-      <form action="/url-to-go-to" method="get" target="_self" autocomplete="off" role="form" id="contact-form"> 
-        <label for="firstname">Title and First Name:</label>
+      <form action="/url-to-go-to" method="get" target="_self" autocomplete="off" aria-label="Contact Form" role="form" id="contact-form"> 
+        <label for="firstname" tabindex="-1">Title and First Name:</label>
         <select name="title">
           <option value="Mr">Mr</option>
           <option value="Mrs">Mrs</option>
@@ -27,16 +27,16 @@
           <option value="Miss">Miss</option>
         </select>
         <input type="text" id="firstname" name="firstname" placeholder="First Name:" required>
-        <label for="surname">Surname:</label>
+        <label for="surname" tabindex="-1">Surname:</label>
         <input type="text" id="surname" name="surname" placeholder="Surname:" required>
-        <label for="email">Email:</label>
+        <label for="email" tabindex="-1">Email:</label>
         <input type="email" id="email" name="email" placeholder="Email:" required>
-        <label for="phone">Phone:</label>
+        <label for="phone" tabindex="-1">Phone:</label>
         <input type="text" id="phone" name="phone" placeholder="Phone:" required>
-        <label for="message">Message:</label>
+        <label for="message" tabindex="-1">Message:</label>
         <textarea name="message" id="message" rows="10" placeholder="Message:"></textarea>
         <div class="g-recaptcha" data-sitekey="6LemDHMUAAAAAPT8Ri1L9w6qN5XZYFLTnUJawHae"></div>
-        <button type="submite">Enquire Now</button>
+        <button type="submite" role="button" aria-label="Submit form button">Enquire Now</button>
       </form>
     </section>
     <script src="https://www.google.com/recaptcha/api.js" async="" defer="">  </script>

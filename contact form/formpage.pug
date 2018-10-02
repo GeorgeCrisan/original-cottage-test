@@ -17,8 +17,8 @@ html(lang='en')
       h1 WWW.SUFFOLK-HOLIDAYS.CO.UK
       h2 Want to buy this domain?
     section  
-      form(action='/url-to-go-to' method='get' target='_self' autocomplete='off' role='form')#contact-form 
-        label(for="firstname") Title and First Name:
+      form(action='/url-to-go-to' method='get' target='_self' autocomplete='off' aria-label="Contact Form" role='form')#contact-form 
+        label(for="firstname" tabindex="-1") Title and First Name:
         select(name='title')
           option(value="Mr") Mr
           option(value="Mrs" ) Mrs
@@ -26,16 +26,16 @@ html(lang='en')
           option(value="Miss") Miss
         
         input(type="text" id='firstname' name='firstname' placeholder='First Name:' required)
-        label(for="surname") Surname:
+        label(for="surname" tabindex="-1") Surname:
         input(type="text" id='surname' name='surname' placeholder='Surname:' required)
-        label(for="email") Email:
+        label(for="email" tabindex="-1") Email:
         input(type="email" id='email' name='email' placeholder='Email:' required)
-        label(for="phone") Phone:
+        label(for="phone" tabindex="-1") Phone:
         input(type="text" id='phone' name='phone' placeholder='Phone:' required)
-        label(for="message") Message:
+        label(for="message" tabindex="-1") Message:
         textarea(name="message" id='message' rows="10" placeholder='Message:' )
         div.g-recaptcha(data-sitekey='6LemDHMUAAAAAPT8Ri1L9w6qN5XZYFLTnUJawHae')
-        button(type='submite') Enquire Now
+        button(type='submite' role='button' aria-label="Submit form button") Enquire Now
 
     script(src='https://www.google.com/recaptcha/api.js' async='' defer='')   
     
