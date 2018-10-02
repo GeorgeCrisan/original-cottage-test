@@ -51,11 +51,95 @@ class MethodOverloadingExample
 
 
 $testObj = new MethodOverloadingExample();
+$testObj2 =  new MethodOverloadingExample();
+//var_dump($testObj);
+//var_dump($testObj2);
 // call method
 $testObj->printString();
 // overload method
 $testObj->newMethod(' I am new to this object');
 // overload static method
 MethodOverloadingExample::secondNewMethod(' I am also new');
+
+
+class exampleSingleton{
+     //Hold the class instance
+   private static $instance;
+       // Make constructor private
+   private function __construct()
+   {
+
+   }
+
+   public static function getInstance()
+  {
+    if (self::$instance == null)
+    {
+      self::$instance = new exampleSingleton();
+    }
+ 
+    return self::$instance;
+  }
+}
+
+$object1 =  exampleSingleton::getInstance();
+$object2 = exampleSingleton::getInstance();
+$object3 = exampleSingleton::getInstance();
+
+echo(var_dump($object1));
+echo(var_dump($object2));
+echo(var_dump($object3));
+
+//example off Singleton usage
+// After establishing an database connection
+// any attempt to create a new object out of the class will
+//return the initial connection
+//this will prevent creating new connections and therefore
+//will prevent slowing down the system
+
+class DbConnect
+{
+  private static $instance = null;
+  private $connection;
+  private $host = 'localhost';
+  private $user ='db user-name';
+  private $pass = 'db password';
+  private $name = 'db name';
+
+
+private function __construct()
+{
+    $this->connection = new PDO("mysql:host={$this->host};
+    dbname={$this->name}", $this->user,$this->pass,
+    array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
+
+}
+
+public static function getInstance(){
+   if(!self::$instance){
+     self::$instance = new DbConnect();
+   }
+
+   return self::$instance;
+}
+
+public function getConnection()
+{
+  return $this->connection;
+}
+}
+
+
+$instance = DbConnect::getInstance();
+$conn = $instance->getConnection();
+var_dump($conn);
+
+$instance = DbConnect::getInstance();
+$conn = $instance->getConnection();
+var_dump($conn);
+
+$instance = DbConnect::getInstance();
+$conn = $instance->getConnection();
+var_dump($conn);
 
 ?>
