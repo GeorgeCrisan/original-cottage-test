@@ -51,14 +51,15 @@ section {
   -ms-flex-flow: row;
   flex-flow: row;
   background-repeat: no-repeat;
-  margin: auto; }
+  margin: auto auto 30px auto; }
   section form {
     width: 50%;
     margin: auto; }
     section form select {
-      height: 30px;
+      height: 36px;
       border-radius: 5px;
-      margin: 8px 0px 8px 0px; }
+      margin: 8px 0px 8px 0px;
+      width: 19.6%; }
     section form input {
       margin: auto;
       width: 100%;
@@ -67,6 +68,9 @@ section {
       height: 35px;
       border-radius: 5px;
       text-indent: 10px; }
+    section form input[name=firstname] {
+      width: 75%;
+      margin: 8px auto auto 6px; }
     section form textarea {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
@@ -141,9 +145,13 @@ section {
     -ms-flex-flow: row;
     flex-flow: row;
     background-repeat: no-repeat;
-    margin: auto; }
+    margin: auto auto 30px auto; }
     section form {
-      width: 90%; } }
+      width: 95%; }
+      section form select {
+        width: 19%; }
+      section form input[name=firstname] {
+        width: 75.9%; } }
 
 @media all and (max-width: 499px) {
   main {
@@ -178,6 +186,10 @@ section {
     -ms-flex-flow: row;
     flex-flow: row;
     background-repeat: no-repeat;
-    margin: auto; }
+    margin: auto auto 30px auto; }
     section form {
-      width: 90%; } }
+      width: 85%; }
+      section form select {
+        width: 18.7%; }
+      section form input[name=firstname] {
+        width: 75.4%; } }

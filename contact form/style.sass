@@ -38,14 +38,16 @@ section
   background-size: 100% 100%
   flex-flow: row
   background-repeat: no-repeat
-  margin: auto
+  margin: auto auto 30px auto
   form 
     width: 50%
     margin: auto
     select 
-      height: 30px
+      height: 36px
       border-radius: 5px
       margin: 8px 0px 8px 0px
+      width: 19.6%
+
     input
       margin: auto
       width: 100%
@@ -54,6 +56,9 @@ section
       height: 35px
       border-radius: 5px
       text-indent: 10px
+    input[name=firstname]
+      width: 75% 
+      margin: 8px auto auto 6px
     textarea
       box-sizing: border-box
       width: 100%  
@@ -87,6 +92,7 @@ section
       width: 100%
       border-radius: 5px
       box-shadow:  0px 0px 5px black
+      
       &:hover
         cursor: pointer
       &:focus 
@@ -116,9 +122,13 @@ section
     background-size: 100% 100%
     flex-flow: row
     background-repeat: no-repeat
-    margin: auto    
+    margin: auto auto 30px auto  
     form 
-      width: 90%    
+      width: 95%  
+      select 
+        width: 19%
+      input[name=firstname]
+        width: 75.9%   
   
 @media all and (max-width: 499px)
     main 
@@ -143,6 +153,10 @@ section
       background-size: 100% 100%
       flex-flow: row
       background-repeat: no-repeat
-      margin: auto    
+      margin: auto auto 30px auto   
       form 
-        width: 90%
+        width: 85%
+        select 
+          width: 18.7%
+        input[name=firstname]
+          width: 75.4% 
