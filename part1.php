@@ -162,7 +162,7 @@ echo(var_dump($object2));
 
 
 //example of Singleton usage
-// After establishing an database connection
+// After establishing a database connection
 // any attempt to create a new object out of the class will
 //return the initial connection
 //this will prevent creating new connections and therefore
