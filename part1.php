@@ -51,7 +51,7 @@ $testObj2 =  new MethodOverloadingExample();
 //var_dump($testObj);
 //var_dump($testObj2);
 
-// overload method ( dynamical create method)
+// overload method ( dynamically create method)
 $testObj->newMethod(' I am new to this object');
 // overload static method
 MethodOverloadingExample::secondNewMethod(' I am also new');
