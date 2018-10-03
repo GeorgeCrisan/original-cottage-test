@@ -30,10 +30,6 @@ class MethodOverloadingExample
 
   }
 
-  protected  function printString()
-  {
-     echo "Super protected but not private string";
-  }
 
   public function __call($name,$arguments)
   {
@@ -54,12 +50,87 @@ $testObj = new MethodOverloadingExample();
 $testObj2 =  new MethodOverloadingExample();
 //var_dump($testObj);
 //var_dump($testObj2);
-// call method
-$testObj->printString();
-// overload method
+
+// overload method ( dynamical create method)
 $testObj->newMethod(' I am new to this object');
 // overload static method
 MethodOverloadingExample::secondNewMethod(' I am also new');
+
+
+
+class RealOverloading
+{
+
+protected const initialNr = 0;
+
+function __call($name,$arguments)
+{
+
+    if($name === 'addNumbers'){
+    
+  switch(count($arguments)){
+    
+    case 0:
+    
+      return self::initialNr;
+    
+    case 1:
+    
+      return $arguments[0] + self::initialNr;
+    
+    case 2:
+    
+      return $arguments[0] + $arguments[1];
+    
+    case 3:
+    
+      return $arguments[0] + $arguments[1] + $arguments[2];
+
+      }
+
+    }
+
+elseif ($name === 'multiplyNumbers'){
+
+      switch(count($arguments)){
+      
+      case 0:
+      
+        return 0;
+      
+      case 1:
+      
+        return $arguments[0];
+
+      case 2:
+
+        return $arguments[0] * $arguments[1];
+
+      case 3:
+
+        return $arguments[0] * $arguments[1] * $arguments[2];
+
+      }
+
+    }
+
+  }
+
+}
+
+$obj = new RealOverloading();
+
+//create method
+var_dump($obj->addNumbers(5));
+
+//overload method
+var_dump($obj->addNumbers(5,6));
+var_dump($obj->addNumbers(5,7,'7'));
+var_dump($obj->multiplyNumbers(5));
+var_dump($obj->multiplyNumbers(8,8));
+var_dump($obj->multiplyNumbers(5,7,9));
+
+
 
 
 class exampleSingleton{
@@ -84,13 +155,13 @@ class exampleSingleton{
 
 $object1 =  exampleSingleton::getInstance();
 $object2 = exampleSingleton::getInstance();
-$object3 = exampleSingleton::getInstance();
+
 
 echo(var_dump($object1));
 echo(var_dump($object2));
-echo(var_dump($object3));
 
-//example off Singleton usage
+
+//example of Singleton usage
 // After establishing an database connection
 // any attempt to create a new object out of the class will
 //return the initial connection
@@ -108,15 +179,14 @@ class DbConnect
 
 
 private function __construct()
-{
-    $this->connection = new PDO("mysql:host={$this->host};
-    dbname={$this->name}", $this->user,$this->pass,
-    array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
-
-}
+  {
+    $this->connection = ' handle db connection';
+  } 
 
 public static function getInstance(){
+
    if(!self::$instance){
+
      self::$instance = new DbConnect();
    }
 
@@ -124,19 +194,19 @@ public static function getInstance(){
 }
 
 public function getConnection()
-{
+  {
   return $this->connection;
-}
+  }
 }
 
 
 $instance = DbConnect::getInstance();
 $conn = $instance->getConnection();
-var_dump($conn);
+var_dump($instance);
 
 $instance = DbConnect::getInstance();
 $conn = $instance->getConnection();
-var_dump($conn);
+var_dump($instance);
 
 $instance = DbConnect::getInstance();
 $conn = $instance->getConnection();
